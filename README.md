@@ -52,7 +52,7 @@ Aria-telegram-mirror-bot is now written in TypeScript. If you are migrating from
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/out386/aria-telegram-mirror-bot
+   git clone https://github.com/MNDL-27/aria-telegram-mirror-bot
    cd aria-telegram-mirror-bot
    ```
 
@@ -95,7 +95,7 @@ Aria-telegram-mirror-bot is now written in TypeScript. If you are migrating from
 
 11. Start the bot with `npm start`
 
-12. Open Telegram, and send `/mirror https://raw.githubusercontent.com/out386/aria-telegram-mirror-bot/master/README.md` to the bot.
+12. Open Telegram, and send `/mirror https://raw.githubusercontent.com/MNDL-27/aria-telegram-mirror-bot/master/README.md` to the bot.
 
 11. In the terminal, it'll ask you to visit an authentication URL. Visit it, grant access, copy the code on that page, and paste it in the terminal.
 
@@ -182,7 +182,7 @@ Run `git pull`, then run `tsc`. After compilation has finished, you can start th
 
 * **`tsc` silently dies, says, "Killed", or stays stuck forever:** Your machine does not have enough RAM. tsc needs at least 1GB. Increase your RAM if running on the cloud, or try  setting up a [swap](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04) with a high swappiness.
 
-* **Trying to download anything gives a "Failed to start the download. Unauthorized" message:** [See #38](https://github.com/out386/aria-telegram-mirror-bot/issues/38). If it still doesn't work, something else might be running an aria2 RPC at the same port as the bot. Change [`ARIA_PORT`](#Constants-description) and try [#38](https://github.com/out386/aria-telegram-mirror-bot/issues/38) again.
+* **Trying to download anything gives a "Failed to start the download. Unauthorized" message:** [See #38](https://github.com/MNDL-27/aria-telegram-mirror-bot/issues/38). If it still doesn't work, something else might be running an aria2 RPC at the same port as the bot. Change [`ARIA_PORT`](#Constants-description) and try [#38](https://github.com/MNDL-27/aria-telegram-mirror-bot/issues/38) again.
 
 * **`tsc` gives errors like `Property 'SOMETHING' does not exist on type<...>` with red lines under `constants.<...>`:** Some new configs were added to [constants](#Constants-description) after you set up the bot, but your existing `./src/.constants.js` does not have them. Re-read [the constants section](#Constants-description), and add whatever property was added. Usually, you can also just ignore these particular errors and keep using the bot, because `tsc` will compile anyway, and there are default options that are used if you did not update your `.constants.js`.
 
